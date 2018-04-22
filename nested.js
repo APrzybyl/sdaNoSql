@@ -15,3 +15,6 @@
  // while (cursor.hasNext()) {
  // printjson(cursor.next());
  //}
+ 
+ 
+db.film.aggregate([{$group: {_id: '$year',total: {$sum:1}} }])
